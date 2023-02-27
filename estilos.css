@@ -1,3 +1,4 @@
+/* configuracion de body y contenido principal */
 body {
 
     background-color: lightgrey;
@@ -6,6 +7,9 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family: poppins;
+    flex-wrap: wrap;
+
+    
 }
 
 .contenido {
@@ -18,8 +22,11 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr;
     color: white;
+    flex-wrap: wrap;
 
 }
+
+/* configuracion del lado izquierdo */
 
 .contenido .izquierda {
     position: relative;
@@ -27,6 +34,7 @@ body {
     padding: 5px;
     padding-left: 10px;
     font-weight: bold;
+    
 }
 
 .contenido .derecha {
@@ -34,8 +42,7 @@ body {
     background-color: whitesmoke;
     padding: 15px;
     color: black;
-
-
+    
 }
 
 .perfil {
@@ -48,18 +55,7 @@ body {
     border-bottom: 1px solid gray;
 
 }
-/**
-.perfil .imagenperfil .img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 400px;
 
-
-
-}
-*/
 .img1:hover {
 
     width: 170px;
@@ -133,114 +129,6 @@ body {
     padding-bottom: 10px;
 }
 
-
-
-.tomas {
-    font-weight: bold;
-    color: #003147;
-    border-bottom: 1px solid #003147;
-    padding-bottom: 40px;
-    font-size: 17px;
-}
-
-.info_formacion {
-    padding-left: 0px;
-    font-weight: bold;
-    color: #003147;
-    border-bottom: 1px solid #003147;
-    padding-bottom: 10px;
-}
-
-.tituloformacion {
-    padding-left: 0px;
-    font-weight: bold;
-    color: black;
-    /*background-image: url(imagenes/montañas.jfif);*/
-    font-size: 50;
-}
-
-.info_trabajo {
-    padding-left: 0px;
-    font-weight: bold;
-    color: black;
-    /*background-image: url(imagenes/montañas.jfif);*/
-    font-size: 50;
-}
-
-.descripcion1 {
-    font-weight: bold;
-    color: #003147;
-    border-bottom: 1px solid #003147;
-    padding-bottom: 10px;
-    list-style-type: circle;
-}
-
-
-.Hobbies {
-    background-image: url(imagenes/montañas.jfif);
-    font-size: 50;
-    color: black;
-    list-style-type: circle;
-}
-
-
-/*.Hobbies2 {
-    columns: 3;
-    padding-left: 10px;
-    color: darkblue;
-    
-    
-}
-*/
-.mostrartexto1:hover { 
-   
-    transform: scale(1.15);
-    position: relative;
-}   
-.mostrartexto1 {
-    cursor: pointer;
-    color: black;
-    border-radius: 20px;
-    border: 2px solid;
-    margin-left: 20px;
-    /*background-image: url(imagenes/cafe.png);*/
-    transition: box-shadow 0.25 ease-in-out;
-    box-shadow: 0 0 40px lightblue inset;
-}
-.mostrartexto1:hover {
-
-    box-shadow: 0 0 10px lightblue inset,0 0 10px 4px lightblue;
-
-}
-
-.mostrartexto1:focus{
-    outline: 0;
-}
-.mostrartexto2:hover { 
-   
-    transform: scale(1.15);
-    position: relative;
-}   
-.mostrartexto2 {
-    cursor: pointer;
-    color: black;
-    border-radius: 20px;
-    border: 2px solid;
-    margin-left: 20px;
-    /*background-image: url(imagenes/cafe.png);*/
-    transition: box-shadow 0.25 ease-in-out;
-    box-shadow: 0 0 40px lightblue inset;
-}
-.mostrartexto2:hover {
-
-    box-shadow: 0 0 10px lightblue inset,0 0 10px 4px lightblue;
-
-}
-
-.mostrartexto2:focus{
-    outline: 0;
-}
-
 .barra {
     position: relative;
     width: 95%;
@@ -249,8 +137,6 @@ body {
     display: block;
     margin: 1px;
     border-radius: 10px;
-    
-    
 }
 
 .titulo4 {
@@ -258,12 +144,13 @@ body {
     margin: 10px;
 }
 
+/* efecto de las barras de habilidades */
 .progreso {
     width: var(--w);
     height: 100%;
     background: lightblue;
     border-radius: 10px;
-    animation: aumentar 2s forwards;
+    animation: aumentar 7s forwards;
 }
 
 @keyframes aumentar {
@@ -293,7 +180,7 @@ body {
     height: 100%;
     background: lightblue;
     border-radius: 10px;
-    animation: aumentar2 2s forwards;
+    animation: aumentar2 7s forwards;
 }
 
 @keyframes aumentar2 {
@@ -305,22 +192,125 @@ body {
         width: var(--w);
     }
 }
-.hide {
-        display: none;
+
+/* configuracion del lado derecho */
+
+.tomas {
+    font-weight: bold;
+    color: #003147;
+    border-bottom: 1px solid #003147;
+    padding-bottom: 40px;
+    font-size: 17px;
+}
+
+.info_formacion {
+    padding-left: 0px;
+    font-weight: bold;
+    color: #003147;
+    border-bottom: 1px solid #003147;
+    padding-bottom: 10px;
+}
+
+.tituloformacion {
+    padding-left: 0px;
+    font-weight: bold;
+    color: black;
+    font-size: 50;
+}
+
+.info_trabajo {
+    padding-left: 0px;
+    font-weight: bold;
+    color: black;
+    font-size: 50;
+}
+
+.descripcion1 {
+    font-weight: bold;
+    color: #003147;
+    border-bottom: 1px solid #003147;
+    padding-bottom: 10px;
+    list-style-type: circle;
+}
+
+.mostrartexto1:hover {
+    transform: scale(1.15);
+    position: relative;
+}
+
+.mostrartexto1 {
+    cursor: pointer;
+    color: black;
+    border-radius: 20px;
+    border: 2px solid;
+    margin-left: 20px;
+    transition: box-shadow 0.25 ease-in-out;
+    box-shadow: 0 0 40px lightblue inset;
+}
+
+.mostrartexto1:hover {
+
+    box-shadow: 0 0 10px lightblue inset, 0 0 10px 4px lightblue;
 
 }
+
+.mostrartexto1:focus {
+    outline: 0;
+}
+
+.mostrartexto2:hover {
+
+    transform: scale(1.15);
+    position: relative;
+}
+
+.mostrartexto2 {
+    cursor: pointer;
+    color: black;
+    border-radius: 20px;
+    border: 2px solid;
+    margin-left: 20px;
+    transition: box-shadow 0.25 ease-in-out;
+    box-shadow: 0 0 40px lightblue inset;
+}
+
+.mostrartexto2:hover {
+
+    box-shadow: 0 0 10px lightblue inset, 0 0 10px 4px lightblue;
+
+}
+
+.mostrartexto2:focus {
+    outline: 0;
+}
+
+.Hobbies {
+    background-image: url(imagenes/montañas.jfif);
+    font-size: 50;
+    color: black;
+    list-style-type: circle;
+}
+
+.hide {
+    display: none;
+
+}
+
 .mostrar {
     display: block;
-    
+
 }
+
 .hide2 {
     display: none;
 
 }
+
 .mostrar2 {
     display: block;
-    
+
 }
+
 .titulosder {
     background-image: url(imagenes/cafe.png);
     font-size: 50;
@@ -333,6 +323,7 @@ body {
     padding: 3px;
     border: 2px lightblue solid;
 }
+
 .titulohob {
     display: flex;
     font-size: 20px;
@@ -349,12 +340,10 @@ body {
     grid-template-columns: repeat(3, 1fr);
     width: 80%;
     margin: 5%;
-    grid-gap : 30px;
+    grid-gap: 30px;
     cursor: pointer;
-    
-
-    
 }
+
 #Hobbies3 img {
 
     width: 100%;
@@ -362,6 +351,7 @@ body {
     position: relative;
     margin-left: 30px;
 }
+
 #Hobbies3 img:hover {
     transform: scale(1.15);
 }
